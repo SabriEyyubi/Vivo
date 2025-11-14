@@ -1,0 +1,280 @@
+/* 
+  Localizable.strings
+  Vivo
+  English
+*/
+
+// MARK: - General
+"app_name" = "Vivo";
+"welcome" = "Welcome";
+"hello" = "Hello";
+"ok" = "OK";
+"cancel" = "Cancel";
+"save" = "Save";
+"delete" = "Delete";
+"edit" = "Edit";
+"done" = "Done";
+"back" = "Back";
+"next" = "Next";
+"previous" = "Previous";
+"loading" = "Loading...";
+"error" = "Error";
+"success" = "Success";
+"warning" = "Warning";
+"info" = "Information";
+
+// MARK: - Authentication
+"login" = "Login";
+"register" = "Register";
+"logout" = "Logout";
+"email" = "Email";
+"password" = "Password";
+"confirm_password" = "Confirm Password";
+"forgot_password" = "Forgot Password?";
+"create_account" = "Create Account";
+"already_have_account" = "Already have an account?";
+"dont_have_account" = "Don't have an account?";
+"login_success" = "Login successful";
+"register_success" = "Registration successful";
+"login_error" = "Login failed";
+"register_error" = "Registration failed";
+"invalid_email" = "Invalid email format";
+"password_too_short" = "Password must be at least 6 characters";
+"passwords_dont_match" = "Passwords don't match";
+"login_with_apple" = "Continue with Apple";
+"login_with_google" = "Continue with Google";
+"continue_without_login" = "Continue without login";
+"welcome_back" = "Welcome Back!";
+"login_subtitle" = "Sign in to your account or continue as guest";
+"or" = "or";
+
+// MARK: - Navigation
+"home" = "Home";
+"search" = "Search";
+"create" = "Create";
+"notifications" = "Notifications";
+"profile" = "Profile";
+"settings" = "Settings";
+"categories" = "Categories";
+"discover" = "Discover";
+"ai" = "AI";
+
+// MARK: - User Profile
+"username" = "Username";
+"display_name" = "Display Name";
+"bio" = "Bio";
+"followers" = "Followers";
+"following" = "Following";
+"posts" = "Posts";
+"edit_profile" = "Edit Profile";
+"follow" = "Follow";
+"unfollow" = "Unfollow";
+"followed" = "Followed";
+
+// MARK: - Posts
+"create_post" = "Create Post";
+"post_content" = "What's on your mind?";
+"add_image" = "Add Image";
+"add_location" = "Add Location";
+"add_hashtags" = "Add hashtags...";
+"like" = "Like";
+"comment" = "Comment";
+"share" = "Share";
+"likes" = "Likes";
+"comments" = "Comments";
+"posted" = "Posted";
+"ago" = "ago";
+
+// MARK: - Time
+"now" = "now";
+"minute_ago" = "%d minute ago";
+"minutes_ago" = "%d minutes ago";
+"hour_ago" = "%d hour ago";
+"hours_ago" = "%d hours ago";
+"day_ago" = "%d day ago";
+"days_ago" = "%d days ago";
+"week_ago" = "%d week ago";
+"weeks_ago" = "%d weeks ago";
+"month_ago" = "%d month ago";
+"months_ago" = "%d months ago";
+"year_ago" = "%d year ago";
+"years_ago" = "%d years ago";
+
+// MARK: - Search
+"search_placeholder" = "Search...";
+"search_users" = "Search Users";
+"search_posts" = "Search Posts";
+"search_hashtags" = "Search Hashtags";
+"no_results" = "No results found";
+"recent_searches" = "Recent Searches";
+"trending" = "Trending";
+
+// MARK: - Notifications
+"notifications" = "Notifications";
+"new_notification" = "New notification";
+"like_notification" = "%@ liked your post";
+"comment_notification" = "%@ commented on your post";
+"follow_notification" = "%@ started following you";
+"mention_notification" = "%@ mentioned you in a post";
+
+// MARK: - Settings
+"language" = "Language";
+"theme" = "Theme";
+"privacy" = "Privacy";
+"account" = "Account";
+"help" = "Help";
+"about" = "About";
+"version" = "Version";
+"dark_mode" = "Dark Mode";
+"light_mode" = "Light Mode";
+"system" = "System";
+
+// MARK: - Errors
+"network_error" = "Network connection error";
+"server_error" = "Server error";
+"unknown_error" = "Unknown error occurred";
+"try_again" = "Try Again";
+"check_connection" = "Please check your internet connection";
+
+// MARK: - Topics
+"daily_topics" = "Today's Topics";
+"participants" = "participants";
+"minutes" = "minutes";
+"trending" = "Trending";
+"easy" = "Easy";
+"medium" = "Medium";
+"hard" = "Hard";
+"join_conversation" = "Join Conversation";
+"hot_topics" = "Hot Topics";
+"more_explore" = "Explore More";
+"more_explore_description" = "Discover more topics and join discussions with AI";
+"topic_suggestions" = "Topic Suggestions";
+"feedback_section" = "Feedback";
+"suggest_topic" = "Suggest Topic";
+"suggest_topic_description" = "Send new topic suggestion";
+"send_feedback" = "Send Feedback";
+"send_feedback_description" = "Share your thoughts";
+"ai_assistant" = "AI Assistant";
+"ai_status" = "Online";
+"ai_placeholder" = "Type your message...";
+"profile_title" = "User";
+"profile_subtitle" = "Vivo User";
+"settings" = "Settings";
+"theme" = "Theme";
+"light_mode" = "Light Mode";
+"dark_mode" = "Dark Mode";
+"language" = "Language";
+"favorites" = "Favorites";
+"logout" = "Logout";
+"logout_confirmation" = "Logout";
+"logout_message" = "Are you sure you want to logout from your account?";
+"cancel" = "Cancel";
+"done" = "Done";
+
+// MARK: - Category Topics
+"discuss" = "Discuss";
+"topic_description_template" = "An interesting topic in this %@ category. You can join for a detailed discussion.";
+"general_topic" = "General Topic";
+"technology" = "Technology";
+"social" = "Social";
+"science" = "Science";
+"art" = "Art";
+"sport" = "Sport";
+
+// MARK: - Technology Topics
+"ai_future" = "AI Future";
+"blockchain_technology" = "Blockchain Technology";
+"quantum_computers" = "Quantum Computers";
+"iot_smart_homes" = "IoT and Smart Homes";
+"5g_technology" = "5G Technology";
+"cybersecurity" = "Cybersecurity";
+"robotics_automation" = "Robotics and Automation";
+
+// MARK: - Social Topics
+"social_media_impact" = "Social Media Impact";
+"digital_detox" = "Digital Detox";
+"online_communication" = "Online Communication";
+"social_anxiety" = "Social Anxiety";
+"friendship_relationships" = "Friendship Relationships";
+"social_change" = "Social Change";
+"cultural_diversity" = "Cultural Diversity";
+
+// MARK: - Science Topics
+"climate_change" = "Climate Change";
+"space_exploration" = "Space Exploration";
+"genetic_engineering" = "Genetic Engineering";
+"nanotechnology" = "Nanotechnology";
+"biodiversity" = "Biodiversity";
+"physics_laws" = "Physics Laws";
+"chemistry_life" = "Chemistry and Life";
+
+// MARK: - Art Topics
+"digital_art" = "Digital Art";
+"modern_painting" = "Modern Painting";
+"sculpture_art" = "Sculpture Art";
+"photography" = "Photography";
+"graphic_design" = "Graphic Design";
+"art_therapy" = "Art Therapy";
+"cultural_heritage" = "Cultural Heritage";
+
+// MARK: - Sport Topics
+"football_world" = "Football World";
+"olympics" = "Olympics";
+"sports_psychology" = "Sports Psychology";
+"training_science" = "Training Science";
+"sports_nutrition" = "Sports Nutrition";
+"injury_prevention" = "Injury Prevention";
+"sports_technology" = "Sports Technology";
+
+// MARK: - Home View Components
+"hot_topic" = "Hot Topic";
+"hot_topic_description" = "This topic is really challenging and worth discussing!";
+"difficult" = "Difficult";
+"suggested_topic" = "Suggested Topic";
+"suggested_topic_description" = "This topic is specially recommended for you";
+"favorite_topic" = "Favorite Topic";
+
+// MARK: - Zodiac Topics
+"zodiac_topics" = "Zodiac Topics";
+"zodiac_topics_description" = "Discover the best topics based on your zodiac sign and your friends' signs";
+"find_perfect_topics" = "Find Perfect Topics";
+"based_on_zodiac" = "Based on Zodiac Signs";
+"enter_zodiac_info" = "Enter Zodiac Information";
+"how_many_people" = "How many people?";
+"person_info" = "Person Information";
+"gender" = "Gender";
+"age" = "Age";
+"age_placeholder" = "Enter age";
+"zodiac_sign" = "Zodiac Sign";
+"male" = "Male";
+"female" = "Female";
+"other" = "Other";
+"aries" = "Aries";
+"taurus" = "Taurus";
+"gemini" = "Gemini";
+"cancer" = "Cancer";
+"leo" = "Leo";
+"virgo" = "Virgo";
+"libra" = "Libra";
+"scorpio" = "Scorpio";
+"sagittarius" = "Sagittarius";
+"capricorn" = "Capricorn";
+"aquarius" = "Aquarius";
+"pisces" = "Pisces";
+"continue" = "Continue";
+"get_recommendations" = "Get Recommendations";
+
+// MARK: - Zodiac Recommendations
+"zodiac_recommendations" = "Zodiac Recommendations";
+"zodiac_recommendations_description" = "Personalized topics based on your zodiac signs";
+"zodiac_signs_included" = "Included Signs";
+"zodiac_communication_style" = "Communication Styles by Zodiac";
+"zodiac_communication_description" = "Explore how different zodiac signs communicate and express themselves";
+"zodiac_relationship_dynamics" = "Relationship Dynamics";
+"zodiac_relationship_description" = "Understand relationship patterns and compatibility between different signs";
+"zodiac_career_paths" = "Career Paths & Zodiac";
+"zodiac_career_description" = "Discover career paths that align with your zodiac sign's natural strengths";
+"zodiac_creative_expression" = "Creative Expression";
+"zodiac_creative_description" = "Explore artistic and creative outlets that match your zodiac personality";
+"zodiac_emotional_intelligence" = "Emotional Intelligence";
+"zodiac_emotional_description" = "Develop emotional awareness and understanding based on zodiac traits";

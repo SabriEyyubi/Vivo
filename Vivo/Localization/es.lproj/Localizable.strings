@@ -1,0 +1,280 @@
+/* 
+  Localizable.strings
+  Vivo
+  Spanish
+*/
+
+// MARK: - General
+"app_name" = "Vivo";
+"welcome" = "Bienvenido";
+"hello" = "Hola";
+"ok" = "OK";
+"cancel" = "Cancelar";
+"save" = "Guardar";
+"delete" = "Eliminar";
+"edit" = "Editar";
+"done" = "Hecho";
+"back" = "Atrás";
+"next" = "Siguiente";
+"previous" = "Anterior";
+"loading" = "Cargando...";
+"error" = "Error";
+"success" = "Éxito";
+"warning" = "Advertencia";
+"info" = "Información";
+
+// MARK: - Authentication
+"login" = "Iniciar Sesión";
+"register" = "Registrarse";
+"logout" = "Cerrar Sesión";
+"email" = "Correo";
+"password" = "Contraseña";
+"confirm_password" = "Confirmar Contraseña";
+"forgot_password" = "¿Olvidaste tu contraseña?";
+"create_account" = "Crear Cuenta";
+"already_have_account" = "¿Ya tienes una cuenta?";
+"dont_have_account" = "¿No tienes una cuenta?";
+"login_success" = "Inicio de sesión exitoso";
+"register_success" = "Registro exitoso";
+"login_error" = "Error al iniciar sesión";
+"register_error" = "Error al registrarse";
+"invalid_email" = "Formato de correo inválido";
+"password_too_short" = "La contraseña debe tener al menos 6 caracteres";
+"passwords_dont_match" = "Las contraseñas no coinciden";
+"login_with_apple" = "Continuar con Apple";
+"login_with_google" = "Continuar con Google";
+"continue_without_login" = "Continuar sin iniciar sesión";
+"welcome_back" = "¡Bienvenido de nuevo!";
+"login_subtitle" = "Inicia sesión en tu cuenta o continúa como invitado";
+"or" = "o";
+
+// MARK: - Navigation
+"home" = "Inicio";
+"search" = "Buscar";
+"create" = "Crear";
+"notifications" = "Notificaciones";
+"profile" = "Perfil";
+"settings" = "Configuración";
+"categories" = "Categorías";
+"discover" = "Descubrir";
+"ai" = "IA";
+
+// MARK: - User Profile
+"username" = "Nombre de Usuario";
+"display_name" = "Nombre para Mostrar";
+"bio" = "Biografía";
+"followers" = "Seguidores";
+"following" = "Siguiendo";
+"posts" = "Publicaciones";
+"edit_profile" = "Editar Perfil";
+"follow" = "Seguir";
+"unfollow" = "Dejar de Seguir";
+"followed" = "Seguido";
+
+// MARK: - Posts
+"create_post" = "Crear Publicación";
+"post_content" = "¿En qué estás pensando?";
+"add_image" = "Agregar Imagen";
+"add_location" = "Agregar Ubicación";
+"add_hashtags" = "Agregar hashtags...";
+"like" = "Me Gusta";
+"comment" = "Comentar";
+"share" = "Compartir";
+"likes" = "Me Gusta";
+"comments" = "Comentarios";
+"posted" = "Publicado";
+"ago" = "hace";
+
+// MARK: - Time
+"now" = "ahora";
+"minute_ago" = "hace %d minuto";
+"minutes_ago" = "hace %d minutos";
+"hour_ago" = "hace %d hora";
+"hours_ago" = "hace %d horas";
+"day_ago" = "hace %d día";
+"days_ago" = "hace %d días";
+"week_ago" = "hace %d semana";
+"weeks_ago" = "hace %d semanas";
+"month_ago" = "hace %d mes";
+"months_ago" = "hace %d meses";
+"year_ago" = "hace %d año";
+"years_ago" = "hace %d años";
+
+// MARK: - Search
+"search_placeholder" = "Buscar...";
+"search_users" = "Buscar Usuarios";
+"search_posts" = "Buscar Publicaciones";
+"search_hashtags" = "Buscar Hashtags";
+"no_results" = "No se encontraron resultados";
+"recent_searches" = "Búsquedas Recientes";
+"trending" = "Tendencia";
+
+// MARK: - Notifications
+"notifications" = "Notificaciones";
+"new_notification" = "Nueva notificación";
+"like_notification" = "%@ le gustó tu publicación";
+"comment_notification" = "%@ comentó en tu publicación";
+"follow_notification" = "%@ comenzó a seguirte";
+"mention_notification" = "%@ te mencionó en una publicación";
+
+// MARK: - Settings
+"language" = "Idioma";
+"theme" = "Tema";
+"privacy" = "Privacidad";
+"account" = "Cuenta";
+"help" = "Ayuda";
+"about" = "Acerca de";
+"version" = "Versión";
+"dark_mode" = "Modo Oscuro";
+"light_mode" = "Modo Claro";
+"system" = "Sistema";
+
+// MARK: - Errors
+"network_error" = "Error de conexión de red";
+"server_error" = "Error del servidor";
+"unknown_error" = "Ocurrió un error desconocido";
+"try_again" = "Intentar de Nuevo";
+"check_connection" = "Por favor verifica tu conexión a internet";
+
+// MARK: - Topics
+"daily_topics" = "Temas del Día";
+"participants" = "participantes";
+"minutes" = "minutos";
+"trending" = "Tendencia";
+"easy" = "Fácil";
+"medium" = "Medio";
+"hard" = "Difícil";
+"join_conversation" = "Unirse a la Conversación";
+"hot_topics" = "Temas Calientes";
+"more_explore" = "Explorar Más";
+"more_explore_description" = "Descubre más temas y únete a discusiones con IA";
+"topic_suggestions" = "Sugerencias de Temas";
+"feedback_section" = "Retroalimentación";
+"suggest_topic" = "Sugerir Tema";
+"suggest_topic_description" = "Enviar nueva sugerencia de tema";
+"send_feedback" = "Enviar Retroalimentación";
+"send_feedback_description" = "Comparte tus pensamientos";
+"ai_assistant" = "Asistente IA";
+"ai_status" = "En línea";
+"ai_placeholder" = "Escribe tu mensaje...";
+"profile_title" = "Usuario";
+"profile_subtitle" = "Usuario de Vivo";
+"settings" = "Configuración";
+"theme" = "Tema";
+"light_mode" = "Modo Claro";
+"dark_mode" = "Modo Oscuro";
+"language" = "Idioma";
+"favorites" = "Favoritos";
+"logout" = "Cerrar Sesión";
+"logout_confirmation" = "Cerrar Sesión";
+"logout_message" = "¿Estás seguro de que quieres cerrar sesión de tu cuenta?";
+"cancel" = "Cancelar";
+"done" = "Hecho";
+
+// MARK: - Category Topics
+"discuss" = "Discutir";
+"topic_description_template" = "Un tema interesante en esta categoría %@. Puedes unirte para una discusión detallada.";
+"general_topic" = "Tema General";
+"technology" = "Tecnología";
+"social" = "Social";
+"science" = "Ciencia";
+"art" = "Arte";
+"sport" = "Deporte";
+
+// MARK: - Technology Topics
+"ai_future" = "Futuro de la IA";
+"blockchain_technology" = "Tecnología Blockchain";
+"quantum_computers" = "Computadoras Cuánticas";
+"iot_smart_homes" = "IoT y Hogares Inteligentes";
+"5g_technology" = "Tecnología 5G";
+"cybersecurity" = "Ciberseguridad";
+"robotics_automation" = "Robótica y Automatización";
+
+// MARK: - Social Topics
+"social_media_impact" = "Impacto de las Redes Sociales";
+"digital_detox" = "Desintoxicación Digital";
+"online_communication" = "Comunicación Online";
+"social_anxiety" = "Ansiedad Social";
+"friendship_relationships" = "Relaciones de Amistad";
+"social_change" = "Cambio Social";
+"cultural_diversity" = "Diversidad Cultural";
+
+// MARK: - Science Topics
+"climate_change" = "Cambio Climático";
+"space_exploration" = "Exploración Espacial";
+"genetic_engineering" = "Ingeniería Genética";
+"nanotechnology" = "Nanotecnología";
+"biodiversity" = "Biodiversidad";
+"physics_laws" = "Leyes de la Física";
+"chemistry_life" = "Química y Vida";
+
+// MARK: - Art Topics
+"digital_art" = "Arte Digital";
+"modern_painting" = "Pintura Moderna";
+"sculpture_art" = "Arte Escultórico";
+"photography" = "Fotografía";
+"graphic_design" = "Diseño Gráfico";
+"art_therapy" = "Arte Terapia";
+"cultural_heritage" = "Patrimonio Cultural";
+
+// MARK: - Sport Topics
+"football_world" = "Mundo del Fútbol";
+"olympics" = "Olimpiadas";
+"sports_psychology" = "Psicología Deportiva";
+"training_science" = "Ciencia del Entrenamiento";
+"sports_nutrition" = "Nutrición Deportiva";
+"injury_prevention" = "Prevención de Lesiones";
+"sports_technology" = "Tecnología Deportiva";
+
+// MARK: - Home View Components
+"hot_topic" = "Tema Caliente";
+"hot_topic_description" = "¡Este tema es realmente desafiante y vale la pena discutir!";
+"difficult" = "Difícil";
+"suggested_topic" = "Tema Sugerido";
+"suggested_topic_description" = "Este tema está especialmente recomendado para ti";
+"favorite_topic" = "Tema Favorito";
+
+// MARK: - Zodiac Topics
+"zodiac_topics" = "Temas del Zodíaco";
+"zodiac_topics_description" = "Descubre los mejores temas basados en tu signo zodiacal y los de tus amigos";
+"find_perfect_topics" = "Encuentra Temas Perfectos";
+"based_on_zodiac" = "Basado en Signos Zodiacales";
+"enter_zodiac_info" = "Ingresa Información del Zodíaco";
+"how_many_people" = "¿Cuántas personas?";
+"person_info" = "Información de la Persona";
+"gender" = "Género";
+"age" = "Edad";
+"age_placeholder" = "Ingresa tu edad";
+"zodiac_sign" = "Signo Zodiacal";
+"male" = "Masculino";
+"female" = "Femenino";
+"other" = "Otro";
+"aries" = "Aries";
+"taurus" = "Tauro";
+"gemini" = "Géminis";
+"cancer" = "Cáncer";
+"leo" = "Leo";
+"virgo" = "Virgo";
+"libra" = "Libra";
+"scorpio" = "Escorpio";
+"sagittarius" = "Sagitario";
+"capricorn" = "Capricornio";
+"aquarius" = "Acuario";
+"pisces" = "Piscis";
+"continue" = "Continuar";
+"get_recommendations" = "Obtener Recomendaciones";
+
+// MARK: - Zodiac Recommendations
+"zodiac_recommendations" = "Recomendaciones del Zodíaco";
+"zodiac_recommendations_description" = "Temas personalizados basados en tus signos zodiacales";
+"zodiac_signs_included" = "Signos Incluidos";
+"zodiac_communication_style" = "Estilos de Comunicación por Zodíaco";
+"zodiac_communication_description" = "Explora cómo los diferentes signos zodiacales se comunican y se expresan";
+"zodiac_relationship_dynamics" = "Dinámicas de Relación";
+"zodiac_relationship_description" = "Comprende los patrones de relación y compatibilidad entre diferentes signos";
+"zodiac_career_paths" = "Carreras y Zodíaco";
+"zodiac_career_description" = "Descubre carreras que se alinean con las fortalezas naturales de tu signo zodiacal";
+"zodiac_creative_expression" = "Expresión Creativa";
+"zodiac_creative_description" = "Explora salidas artísticas y creativas que coincidan con tu personalidad zodiacal";
+"zodiac_emotional_intelligence" = "Inteligencia Emocional";
+"zodiac_emotional_description" = "Desarrolla conciencia y comprensión emocional basada en rasgos zodiacales";

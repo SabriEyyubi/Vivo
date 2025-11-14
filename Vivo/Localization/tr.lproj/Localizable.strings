@@ -1,0 +1,280 @@
+/* 
+  Localizable.strings
+  Vivo
+  Turkish
+*/
+
+// MARK: - General
+"app_name" = "Vivo";
+"welcome" = "Hoş Geldiniz";
+"hello" = "Merhaba";
+"ok" = "Tamam";
+"cancel" = "İptal";
+"save" = "Kaydet";
+"delete" = "Sil";
+"edit" = "Düzenle";
+"done" = "Bitti";
+"back" = "Geri";
+"next" = "İleri";
+"previous" = "Önceki";
+"loading" = "Yükleniyor...";
+"error" = "Hata";
+"success" = "Başarılı";
+"warning" = "Uyarı";
+"info" = "Bilgi";
+
+// MARK: - Authentication
+"login" = "Giriş Yap";
+"register" = "Kayıt Ol";
+"logout" = "Çıkış Yap";
+"email" = "E-posta";
+"password" = "Şifre";
+"confirm_password" = "Şifreyi Onayla";
+"forgot_password" = "Şifremi Unuttum?";
+"create_account" = "Hesap Oluştur";
+"already_have_account" = "Zaten hesabınız var mı?";
+"dont_have_account" = "Hesabınız yok mu?";
+"login_success" = "Giriş başarılı";
+"register_success" = "Kayıt başarılı";
+"login_error" = "Giriş başarısız";
+"register_error" = "Kayıt başarısız";
+"invalid_email" = "Geçersiz e-posta formatı";
+"password_too_short" = "Şifre en az 6 karakter olmalı";
+"passwords_dont_match" = "Şifreler eşleşmiyor";
+"login_with_apple" = "Apple ile Devam Et";
+"login_with_google" = "Google ile Devam Et";
+"continue_without_login" = "Giriş Yapmadan Devam Et";
+"welcome_back" = "Tekrar Hoş Geldiniz!";
+"login_subtitle" = "Hesabınıza giriş yapın veya misafir olarak devam edin";
+"or" = "veya";
+
+// MARK: - Navigation
+"home" = "Ana Sayfa";
+"search" = "Ara";
+"create" = "Oluştur";
+"notifications" = "Bildirimler";
+"profile" = "Profil";
+"settings" = "Ayarlar";
+"categories" = "Kategoriler";
+"discover" = "Keşfet";
+"ai" = "AI";
+
+// MARK: - User Profile
+"username" = "Kullanıcı Adı";
+"display_name" = "Görünen Ad";
+"bio" = "Hakkımda";
+"followers" = "Takipçiler";
+"following" = "Takip Edilenler";
+"posts" = "Gönderiler";
+"edit_profile" = "Profili Düzenle";
+"follow" = "Takip Et";
+"unfollow" = "Takibi Bırak";
+"followed" = "Takip Edildi";
+
+// MARK: - Posts
+"create_post" = "Gönderi Oluştur";
+"post_content" = "Aklından ne geçiyor?";
+"add_image" = "Resim Ekle";
+"add_location" = "Konum Ekle";
+"add_hashtags" = "Hashtag ekle...";
+"like" = "Beğen";
+"comment" = "Yorum Yap";
+"share" = "Paylaş";
+"likes" = "Beğeni";
+"comments" = "Yorumlar";
+"posted" = "Paylaşıldı";
+"ago" = "önce";
+
+// MARK: - Time
+"now" = "şimdi";
+"minute_ago" = "%d dakika önce";
+"minutes_ago" = "%d dakika önce";
+"hour_ago" = "%d saat önce";
+"hours_ago" = "%d saat önce";
+"day_ago" = "%d gün önce";
+"days_ago" = "%d gün önce";
+"week_ago" = "%d hafta önce";
+"weeks_ago" = "%d hafta önce";
+"month_ago" = "%d ay önce";
+"months_ago" = "%d ay önce";
+"year_ago" = "%d yıl önce";
+"years_ago" = "%d yıl önce";
+
+// MARK: - Search
+"search_placeholder" = "Ara...";
+"search_users" = "Kullanıcı Ara";
+"search_posts" = "Gönderi Ara";
+"search_hashtags" = "Hashtag Ara";
+"no_results" = "Sonuç bulunamadı";
+"recent_searches" = "Son Aramalar";
+"trending" = "Trend";
+
+// MARK: - Notifications
+"notifications" = "Bildirimler";
+"new_notification" = "Yeni bildirim";
+"like_notification" = "%@ gönderinizi beğendi";
+"comment_notification" = "%@ gönderinize yorum yaptı";
+"follow_notification" = "%@ sizi takip etmeye başladı";
+"mention_notification" = "%@ sizi bir gönderide bahsetti";
+
+// MARK: - Settings
+"language" = "Dil";
+"theme" = "Tema";
+"privacy" = "Gizlilik";
+"account" = "Hesap";
+"help" = "Yardım";
+"about" = "Hakkında";
+"version" = "Sürüm";
+"dark_mode" = "Karanlık Mod";
+"light_mode" = "Aydınlık Mod";
+"system" = "Sistem";
+
+// MARK: - Errors
+"network_error" = "Ağ bağlantı hatası";
+"server_error" = "Sunucu hatası";
+"unknown_error" = "Bilinmeyen hata oluştu";
+"try_again" = "Tekrar Dene";
+"check_connection" = "Lütfen internet bağlantınızı kontrol edin";
+
+// MARK: - Topics
+"daily_topics" = "Günün Konuları";
+"participants" = "katılımcı";
+"minutes" = "dakika";
+"trending" = "Trend";
+"easy" = "Kolay";
+"medium" = "Orta";
+"hard" = "Zor";
+"join_conversation" = "Konuşmaya Katıl";
+"hot_topics" = "Sıcak Konular";
+"more_explore" = "Daha Fazla Keşfet";
+"more_explore_description" = "AI ile daha fazla konu keşfet ve tartışmaya katıl";
+"topic_suggestions" = "Konu Önerileri";
+"feedback_section" = "Geri Bildirim";
+"suggest_topic" = "Konu Öner";
+"suggest_topic_description" = "Yeni konu önerisi gönder";
+"send_feedback" = "Geri Bildirim";
+"send_feedback_description" = "Görüşlerini paylaş";
+"ai_assistant" = "AI Asistan";
+"ai_status" = "Çevrimiçi";
+"ai_placeholder" = "Mesajınızı yazın...";
+"profile_title" = "Kullanıcı";
+"profile_subtitle" = "Vivo Kullanıcısı";
+"settings" = "Ayarlar";
+"theme" = "Tema";
+"light_mode" = "Açık Tema";
+"dark_mode" = "Koyu Tema";
+"language" = "Dil";
+"favorites" = "Beğenilenler";
+"logout" = "Çıkış Yap";
+"logout_confirmation" = "Çıkış Yap";
+"logout_message" = "Hesabınızdan çıkış yapmak istediğinizden emin misiniz?";
+"cancel" = "İptal";
+"done" = "Tamam";
+
+// MARK: - Category Topics
+"discuss" = "Tartış";
+"topic_description_template" = "Bu %@ kategorisinde yer alan ilginç bir konu. Detaylı tartışma için katılabilirsiniz.";
+"general_topic" = "Genel Konu";
+"technology" = "Teknoloji";
+"social" = "Sosyal";
+"science" = "Bilim";
+"art" = "Sanat";
+"sport" = "Spor";
+
+// MARK: - Technology Topics
+"ai_future" = "Yapay Zeka Geleceği";
+"blockchain_technology" = "Blockchain Teknolojisi";
+"quantum_computers" = "Kuantum Bilgisayarlar";
+"iot_smart_homes" = "IoT ve Akıllı Evler";
+"5g_technology" = "5G Teknolojisi";
+"cybersecurity" = "Siber Güvenlik";
+"robotics_automation" = "Robotik ve Otomasyon";
+
+// MARK: - Social Topics
+"social_media_impact" = "Sosyal Medya Etkisi";
+"digital_detox" = "Dijital Detoks";
+"online_communication" = "Online İletişim";
+"social_anxiety" = "Sosyal Anksiyete";
+"friendship_relationships" = "Arkadaşlık İlişkileri";
+"social_change" = "Toplumsal Değişim";
+"cultural_diversity" = "Kültürel Çeşitlilik";
+
+// MARK: - Science Topics
+"climate_change" = "İklim Değişikliği";
+"space_exploration" = "Uzay Keşfi";
+"genetic_engineering" = "Genetik Mühendislik";
+"nanotechnology" = "Nanoteknoloji";
+"biodiversity" = "Biyolojik Çeşitlilik";
+"physics_laws" = "Fizik Yasaları";
+"chemistry_life" = "Kimya ve Yaşam";
+
+// MARK: - Art Topics
+"digital_art" = "Dijital Sanat";
+"modern_painting" = "Modern Resim";
+"sculpture_art" = "Heykel Sanatı";
+"photography" = "Fotografçılık";
+"graphic_design" = "Grafik Tasarım";
+"art_therapy" = "Sanat Terapisi";
+"cultural_heritage" = "Kültürel Miras";
+
+// MARK: - Sport Topics
+"football_world" = "Futbol Dünyası";
+"olympics" = "Olimpiyatlar";
+"sports_psychology" = "Spor Psikolojisi";
+"training_science" = "Antrenman Bilimi";
+"sports_nutrition" = "Spor Beslenmesi";
+"injury_prevention" = "Yaralanma Önleme";
+"sports_technology" = "Spor Teknolojisi";
+
+// MARK: - Home View Components
+"hot_topic" = "Sıcak Konu";
+"hot_topic_description" = "Bu konu gerçekten zor ve tartışmaya değer!";
+"difficult" = "Zor";
+"suggested_topic" = "Önerilen Konu";
+"suggested_topic_description" = "Bu konu size özel olarak öneriliyor";
+"favorite_topic" = "Beğenilen Konu";
+
+// MARK: - Zodiac Topics
+"zodiac_topics" = "Burç Konuları";
+"zodiac_topics_description" = "Burç işaretinize ve arkadaşlarınızın burçlarına göre en iyi konuları keşfedin";
+"find_perfect_topics" = "Mükemmel Konuları Bul";
+"based_on_zodiac" = "Burç İşaretlerine Göre";
+"enter_zodiac_info" = "Burç Bilgilerini Girin";
+"how_many_people" = "Kaç kişi?";
+"person_info" = "Kişi Bilgileri";
+"gender" = "Cinsiyet";
+"age" = "Yaş";
+"age_placeholder" = "Yaşınızı girin";
+"zodiac_sign" = "Burç İşareti";
+"male" = "Erkek";
+"female" = "Kadın";
+"other" = "Diğer";
+"aries" = "Koç";
+"taurus" = "Boğa";
+"gemini" = "İkizler";
+"cancer" = "Yengeç";
+"leo" = "Aslan";
+"virgo" = "Başak";
+"libra" = "Terazi";
+"scorpio" = "Akrep";
+"sagittarius" = "Yay";
+"capricorn" = "Oğlak";
+"aquarius" = "Kova";
+"pisces" = "Balık";
+"continue" = "Devam Et";
+"get_recommendations" = "Önerileri Al";
+
+// MARK: - Zodiac Recommendations
+"zodiac_recommendations" = "Burç Önerileri";
+"zodiac_recommendations_description" = "Burç işaretlerinize göre kişiselleştirilmiş konular";
+"zodiac_signs_included" = "Dahil Edilen İşaretler";
+"zodiac_communication_style" = "Burçlara Göre İletişim Tarzları";
+"zodiac_communication_description" = "Farklı burç işaretlerinin nasıl iletişim kurduğunu ve kendini ifade ettiğini keşfedin";
+"zodiac_relationship_dynamics" = "İlişki Dinamikleri";
+"zodiac_relationship_description" = "Farklı işaretler arasındaki ilişki kalıplarını ve uyumluluğu anlayın";
+"zodiac_career_paths" = "Kariyer Yolları ve Burç";
+"zodiac_career_description" = "Burç işaretinizin doğal güçlü yanlarıyla uyumlu kariyer yollarını keşfedin";
+"zodiac_creative_expression" = "Yaratıcı İfade";
+"zodiac_creative_description" = "Burç kişiliğinizle eşleşen sanatsal ve yaratıcı çıkışları keşfedin";
+"zodiac_emotional_intelligence" = "Duygusal Zeka";
+"zodiac_emotional_description" = "Burç özelliklerinize dayalı duygusal farkındalık ve anlayış geliştirin";
