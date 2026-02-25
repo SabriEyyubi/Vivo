@@ -11,63 +11,9 @@ struct ZodiacRecommendationsView: View {
     @StateObject private var themeManager = ThemeManager.shared
     @Environment(\.presentationMode) var presentationMode
     
-    let people: [PersonInfo]
-    
-    // Safety check for people array
-    private var safePeople: [PersonInfo] {
-        return people.isEmpty ? [] : people
-    }
-    
-    // Dummy recommended topics based on zodiac signs
-    private var recommendedTopics: [ZodiacTopic] {
-        // Safety check to prevent crashes
-        guard !safePeople.isEmpty else {
-            return []
-        }
-        
-        return [
-            ZodiacTopic(
-                id: 1,
-                title: "zodiac_communication_style".localized,
-                description: "zodiac_communication_description".localized,
-                difficulty: "easy".localized,
-                zodiacSigns: ["aries", "gemini", "leo"],
-                isTrending: true
-            ),
-            ZodiacTopic(
-                id: 2,
-                title: "zodiac_relationship_dynamics".localized,
-                description: "zodiac_relationship_description".localized,
-                difficulty: "medium".localized,
-                zodiacSigns: ["cancer", "scorpio", "pisces"],
-                isTrending: false
-            ),
-            ZodiacTopic(
-                id: 3,
-                title: "zodiac_career_paths".localized,
-                description: "zodiac_career_description".localized,
-                difficulty: "medium".localized,
-                zodiacSigns: ["capricorn", "virgo", "taurus"],
-                isTrending: true
-            ),
-            ZodiacTopic(
-                id: 4,
-                title: "zodiac_creative_expression".localized,
-                description: "zodiac_creative_description".localized,
-                difficulty: "easy".localized,
-                zodiacSigns: ["aquarius", "libra", "sagittarius"],
-                isTrending: false
-            ),
-            ZodiacTopic(
-                id: 5,
-                title: "zodiac_emotional_intelligence".localized,
-                description: "zodiac_emotional_description".localized,
-                difficulty: "hard".localized,
-                zodiacSigns: ["cancer", "scorpio", "pisces", "virgo"],
-                isTrending: true
-            )
-        ]
-    }
+    let topics: [ZodiacTopic]
+    @State private var showingShareSheet = false
+    @State private var shareItems: [Any] = []
     
     var body: some View {
         ZStack {
@@ -106,10 +52,20 @@ struct ZodiacRecommendationsView: View {
                     .padding(.horizontal, 20)
                     
                     // Recommended Topics
-                    LazyVStack(spacing: 16) {
-                        ForEach(recommendedTopics) { topic in
-                            ZodiacRecommendationCard(topic: topic)
-                                .padding(.horizontal, 20)
+                    if topics.isEmpty {
+                        Text("no_recommendations".localized)
+                            .font(.system(.body, design: .rounded, weight: .medium))
+                            .foregroundColor(Color.theme(.secondaryText))
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                    } else {
+                        LazyVStack(spacing: 16) {
+                            ForEach(topics) { topic in
+                                ZodiacRecommendationCard(topic: topic) {
+                                    presentShare(for: topic)
+                                }
+                                    .padding(.horizontal, 20)
+                            }
                         }
                     }
                     
@@ -119,6 +75,15 @@ struct ZodiacRecommendationsView: View {
         }
         .navigationTitle("zodiac_recommendations".localized)
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $showingShareSheet) {
+            ShareSheet(items: shareItems)
+        }
+    }
+
+    private func presentShare(for topic: ZodiacTopic) {
+        let text = "\(topic.title)\n\n\(topic.description)"
+        shareItems = [text]
+        showingShareSheet = true
     }
 }
 
@@ -134,6 +99,7 @@ struct ZodiacTopic: Identifiable {
 struct ZodiacRecommendationCard: View {
     @StateObject private var themeManager = ThemeManager.shared
     let topic: ZodiacTopic
+    let onDiscuss: () -> Void
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -180,7 +146,6 @@ struct ZodiacRecommendationCard: View {
                 .font(.system(.body, design: .rounded, weight: .medium))
                 .foregroundColor(Color.theme(.secondaryText))
                 .opacity(themeManager.currentTheme == .dark ? 0.9 : 1.0)
-                .lineLimit(3)
                 .multilineTextAlignment(.leading)
             
             // Zodiac signs
@@ -213,8 +178,7 @@ struct ZodiacRecommendationCard: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    // Handle topic discussion
-                    print("Start discussion for: \(topic.title)")
+                    onDiscuss()
                 }) {
                     Text("discuss".localized)
                         .font(.system(.caption, design: .rounded, weight: .semibold))
@@ -257,6 +221,6 @@ struct ZodiacRecommendationCard: View {
 
 #Preview {
     NavigationView {
-        ZodiacRecommendationsView(people: [])
+        ZodiacRecommendationsView(topics: [])
     }
 }

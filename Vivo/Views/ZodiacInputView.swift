@@ -16,6 +16,11 @@ struct ZodiacInputView: View {
     @State private var people: [PersonInfo] = []
     @State private var currentStep: Int = 0
     @State private var showingRecommendations = false
+    @State private var generatedTopics: [ZodiacTopic] = []
+    @State private var isLoading = false
+    @State private var errorMessage: String?
+    @State private var apiKeyInput: String = ""
+    @State private var hasStoredKey = false
     
     var body: some View {
         ZStack {
@@ -115,6 +120,41 @@ struct ZodiacInputView: View {
                             }
                         }
                     }
+
+                    if !hasStoredKey {
+                        VStack(spacing: 12) {
+                            Text("api_key".localized)
+                                .font(.system(.headline, design: .rounded, weight: .semibold))
+                                .foregroundColor(Color.theme(.primaryText))
+                            
+                            SecureField("api_key_placeholder".localized, text: $apiKeyInput)
+                                .textFieldStyle(RoundedBorderTextFieldStyle())
+                                .font(.system(.body, design: .rounded, weight: .medium))
+                                .foregroundColor(Color.theme(.primaryText))
+                                .onSubmit {
+                                    saveApiKey()
+                                }
+                            
+                            Button(action: saveApiKey) {
+                                Text("save_key".localized)
+                                    .font(.system(.headline, design: .rounded, weight: .semibold))
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: .infinity)
+                                    .padding(.vertical, 12)
+                                    .background(Color.theme(.primaryAccent))
+                                    .cornerRadius(12)
+                            }
+                        }
+                        .padding(16)
+                        .background(
+                            RoundedRectangle(cornerRadius: 16)
+                                .fill(Color.theme(.cardBackground))
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 16)
+                                        .stroke(Color.theme(.border).opacity(0.3), lineWidth: 1)
+                                )
+                        )
+                    }
                     
                     // Continue/Get Recommendations Button
                     Button(action: {
@@ -133,9 +173,14 @@ struct ZodiacInputView: View {
                                 .foregroundColor(.white)
                             
                             if currentStep == 1 {
-                                Image(systemName: "sparkles")
-                                    .font(.system(.headline, weight: .semibold))
-                                    .foregroundColor(.white)
+                                if isLoading {
+                                    ProgressView()
+                                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                                } else {
+                                    Image(systemName: "sparkles")
+                                        .font(.system(.headline, weight: .semibold))
+                                        .foregroundColor(.white)
+                                }
                             }
                         }
                         .frame(maxWidth: .infinity)
@@ -153,8 +198,16 @@ struct ZodiacInputView: View {
                         .cornerRadius(16)
                     }
                     .padding(.horizontal, 20)
-                    .disabled(currentStep == 1 && !isFormValid)
+                    .disabled(currentStep == 1 && (!isFormValid || isLoading))
                     .opacity(currentStep == 1 && !isFormValid ? 0.6 : 1.0)
+
+                    if let errorMessage {
+                        Text(errorMessage)
+                            .font(.system(.caption, design: .rounded, weight: .medium))
+                            .foregroundColor(.red)
+                            .multilineTextAlignment(.center)
+                            .padding(.horizontal, 20)
+                    }
                     
                     Spacer(minLength: 20)
                 }
@@ -164,7 +217,10 @@ struct ZodiacInputView: View {
         .navigationTitle("zodiac_topics".localized)
         .navigationBarTitleDisplayMode(.inline)
         .navigationDestination(isPresented: $showingRecommendations) {
-            ZodiacRecommendationsView(people: people)
+            ZodiacRecommendationsView(topics: generatedTopics)
+        }
+        .onAppear {
+            hasStoredKey = KeychainService.get("openai_api_key") != nil
         }
     }
     
@@ -175,7 +231,62 @@ struct ZodiacInputView: View {
     }
     
     private func getRecommendations() {
-        showingRecommendations = true
+        if !apiKeyInput.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            saveApiKey()
+        }
+
+        guard let apiKey = KeychainService.get("openai_api_key") else {
+            errorMessage = "missing_api_key".localized
+            return
+        }
+
+        errorMessage = nil
+        isLoading = true
+
+        Task {
+            do {
+                let topics = try await OpenAIClient.shared.fetchZodiacTopics(
+                    people: people,
+                    languageCode: localizationHelper.currentLanguage.rawValue,
+                    apiKey: apiKey
+                )
+                let localized = topics.map { topic in
+                    ZodiacTopic(
+                        id: topic.id,
+                        title: topic.title,
+                        description: topic.description,
+                        difficulty: topic.difficulty.localized,
+                        zodiacSigns: topic.zodiacSigns,
+                        isTrending: topic.isTrending
+                    )
+                }
+                generatedTopics = localized
+                showingRecommendations = true
+            } catch {
+                if let apiError = error as? OpenAIClientError {
+                    switch apiError {
+                    case .apiError(let message):
+                        errorMessage = message
+                    case .missingAPIKey:
+                        errorMessage = "missing_api_key".localized
+                    default:
+                        errorMessage = "try_again".localized
+                    }
+                } else {
+                    errorMessage = "try_again".localized
+                }
+            }
+
+            isLoading = false
+        }
+    }
+
+    private func saveApiKey() {
+        let trimmed = apiKeyInput.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        let saved = KeychainService.set(trimmed, for: "openai_api_key")
+        apiKeyInput = ""
+        hasStoredKey = saved
     }
 }
 

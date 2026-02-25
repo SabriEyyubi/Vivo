@@ -11,7 +11,6 @@ struct ProfileView: View {
     @StateObject private var localizationHelper = LocalizationHelper.shared
     @StateObject private var themeManager = ThemeManager.shared
     @State private var showingLogoutAlert = false
-    @State private var showingFavoritesView = false
     
     var body: some View {
         ZStack {
@@ -124,61 +123,6 @@ struct ProfileView: View {
                         .padding(.horizontal, 20)
                     }
                     
-                    // Favorites Section
-                    VStack(spacing: 16) {
-                        Button(action: {
-                            showingFavoritesView = true
-                        }) {
-                            HStack {
-                                Text("favorites".localized)
-                                    .font(.system(.title3, design: .rounded, weight: .bold))
-                                    .foregroundStyle(
-                                        LinearGradient(
-                                            gradient: Gradient(colors: [
-                                                Color.theme(.primaryText),
-                                                Color.theme(.primaryText).opacity(0.8)
-                                            ]),
-                                            startPoint: .leading,
-                                            endPoint: .trailing
-                                        )
-                                    )
-                                
-                                Spacer()
-                                
-                                HStack(spacing: 8) {
-                                    Text("3")
-                                        .font(.system(.caption, design: .rounded, weight: .bold))
-                                        .foregroundColor(.white)
-                                        .padding(.horizontal, 8)
-                                        .padding(.vertical, 4)
-                                        .background(
-                                            Capsule()
-                                                .fill(Color.theme(.primaryAccent))
-                                        )
-                                    
-                                    Image(systemName: "chevron.right")
-                                        .font(.system(.caption, weight: .bold))
-                                        .foregroundColor(Color.theme(.secondaryText))
-                                }
-                            }
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        .padding(.horizontal, 20)
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 12) {
-                                ForEach(0..<3) { index in
-                                    FavoriteTopicCard(
-                                        title: "Beğenilen Konu \(index + 1)",
-                                        category: index % 2 == 0 ? "Teknoloji" : "Sosyal"
-                                    )
-                                    .frame(width: 200)
-                                }
-                            }
-                            .padding(.horizontal, 20)
-                        }
-                    }
-                    
                     Spacer()
                     
                     // Logout Section
@@ -225,9 +169,6 @@ struct ProfileView: View {
             }
         } message: {
             Text("logout_message".localized)
-        }
-        .sheet(isPresented: $showingFavoritesView) {
-            FavoritesView()
         }
         .onReceive(localizationHelper.$currentLanguage) { _ in
             // Refresh when language changes

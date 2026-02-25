@@ -17,22 +17,16 @@ class RealmManager: ObservableObject {
         do {
             // Configure Realm with device-compatible settings
             var config = Realm.Configuration()
-            config.schemaVersion = 2 // Updated for new simple models
+            config.schemaVersion = 3 // Updated for TopicRealm
             config.migrationBlock = { migration, oldSchemaVersion in
                 // Handle migrations here if needed
-                if oldSchemaVersion < 2 {
-                    // Migration from social media models to simple models
+                if oldSchemaVersion < 3 {
+                    // Migration for TopicRealm
                 }
             }
             
-            // Use in-memory database for testing or file-based for production
-            #if DEBUG
-            // For development, use in-memory database to avoid file system issues
-            config.inMemoryIdentifier = "VivoDebugRealm"
-            #else
             // For production, use file-based database with proper file permissions
             config.fileURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("vivo.realm")
-            #endif
             
             self.realm = try Realm(configuration: config)
         } catch {

@@ -9,7 +9,12 @@ import Foundation
 
 struct Category: Identifiable, Hashable {
     let id: Int
+    let key: String
     let name: String
     let icon: String
     let topicCount: Int
+
+    var displayName: String {
+        key.localized
+    }
 }

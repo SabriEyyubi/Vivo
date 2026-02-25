@@ -14,21 +14,21 @@ struct CategoriesView: View {
     
     // Dummy categories data
     private let categories = [
-        Category(id: 1, name: "Teknoloji", icon: "laptopcomputer", topicCount: 25),
-        Category(id: 2, name: "Sosyal", icon: "person.2.fill", topicCount: 18),
-        Category(id: 3, name: "Bilim", icon: "atom", topicCount: 22),
-        Category(id: 4, name: "Sanat", icon: "paintpalette.fill", topicCount: 15),
-        Category(id: 5, name: "Spor", icon: "sportscourt.fill", topicCount: 20),
-        Category(id: 6, name: "Müzik", icon: "music.note", topicCount: 12),
-        Category(id: 7, name: "Film", icon: "tv.fill", topicCount: 16),
-        Category(id: 8, name: "Kitap", icon: "book.fill", topicCount: 14),
-        Category(id: 9, name: "Yemek", icon: "fork.knife", topicCount: 19),
-        Category(id: 10, name: "Seyahat", icon: "airplane", topicCount: 13),
-        Category(id: 11, name: "Moda", icon: "tshirt.fill", topicCount: 11),
-        Category(id: 12, name: "Sağlık", icon: "heart.fill", topicCount: 17),
-        Category(id: 13, name: "Eğitim", icon: "graduationcap.fill", topicCount: 21),
-        Category(id: 14, name: "Çevre", icon: "leaf.fill", topicCount: 9),
-        Category(id: 15, name: "İş Hayatı", icon: "briefcase.fill", topicCount: 23)
+        Category(id: 1, key: "technology", name: "Teknoloji", icon: "laptopcomputer", topicCount: 25),
+        Category(id: 2, key: "social", name: "Sosyal", icon: "person.2.fill", topicCount: 18),
+        Category(id: 3, key: "science", name: "Bilim", icon: "atom", topicCount: 22),
+        Category(id: 4, key: "art", name: "Sanat", icon: "paintpalette.fill", topicCount: 15),
+        Category(id: 5, key: "sport", name: "Spor", icon: "sportscourt.fill", topicCount: 20),
+        Category(id: 6, key: "music", name: "Müzik", icon: "music.note", topicCount: 12),
+        Category(id: 7, key: "film", name: "Film", icon: "tv.fill", topicCount: 16),
+        Category(id: 8, key: "book", name: "Kitap", icon: "book.fill", topicCount: 14),
+        Category(id: 9, key: "food", name: "Yemek", icon: "fork.knife", topicCount: 19),
+        Category(id: 10, key: "travel", name: "Seyahat", icon: "airplane", topicCount: 13),
+        Category(id: 11, key: "fashion", name: "Moda", icon: "tshirt.fill", topicCount: 11),
+        Category(id: 12, key: "health", name: "Sağlık", icon: "heart.fill", topicCount: 17),
+        Category(id: 13, key: "education", name: "Eğitim", icon: "graduationcap.fill", topicCount: 21),
+        Category(id: 14, key: "environment", name: "Çevre", icon: "leaf.fill", topicCount: 9),
+        Category(id: 15, key: "work_life", name: "İş Hayatı", icon: "briefcase.fill", topicCount: 23)
     ]
     
     var body: some View {

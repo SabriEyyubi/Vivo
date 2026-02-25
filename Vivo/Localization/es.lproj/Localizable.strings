@@ -180,6 +180,20 @@
 "science" = "Ciencia";
 "art" = "Arte";
 "sport" = "Deporte";
+"music" = "Música";
+"film" = "Cine";
+"book" = "Libros";
+"food" = "Comida";
+"travel" = "Viajes";
+"fashion" = "Moda";
+"health" = "Salud";
+"education" = "Educación";
+"environment" = "Medio ambiente";
+"work_life" = "Vida laboral";
+"topic_count" = "%d temas";
+"easy" = "Fácil";
+"medium" = "Medio";
+"hard" = "Difícil";
 
 // MARK: - Technology Topics
 "ai_future" = "Futuro de la IA";
@@ -267,6 +281,12 @@
 // MARK: - Zodiac Recommendations
 "zodiac_recommendations" = "Recomendaciones del Zodíaco";
 "zodiac_recommendations_description" = "Temas personalizados basados en tus signos zodiacales";
+"api_key" = "Clave API de OpenAI";
+"api_key_placeholder" = "Pega tu clave API";
+"save_key" = "Guardar clave";
+"missing_api_key" = "Se requiere una clave API para obtener recomendaciones.";
+"try_again" = "Algo salió mal. Inténtalo de nuevo.";
+"no_recommendations" = "Aún no hay recomendaciones.";
 "zodiac_signs_included" = "Signos Incluidos";
 "zodiac_communication_style" = "Estilos de Comunicación por Zodíaco";
 "zodiac_communication_description" = "Explora cómo los diferentes signos zodiacales se comunican y se expresan";

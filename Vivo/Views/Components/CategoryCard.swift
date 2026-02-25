@@ -28,13 +28,13 @@ struct CategoryCard: View {
                 
                 // Content
                 VStack(spacing: 4) {
-                    Text(category.name)
+                    Text(category.displayName)
                         .font(.system(.headline, design: .rounded, weight: .bold))
                         .foregroundColor(Color.theme(.primaryText))
                         .multilineTextAlignment(.center)
                         .lineLimit(1)
                     
-                    Text("\(category.topicCount) konu")
+                    Text("topic_count".localized(with: category.topicCount))
                         .font(.system(.caption, design: .rounded, weight: .medium))
                         .foregroundColor(Color.theme(.secondaryText))
                 }
@@ -75,11 +75,11 @@ struct CategoryCard: View {
         GridItem(.flexible()),
         GridItem(.flexible())
     ], spacing: 16) {
-        CategoryCard(category: Category(id: 1, name: "Teknoloji", icon: "laptopcomputer", topicCount: 25)) {
+        CategoryCard(category: Category(id: 1, key: "technology", name: "Teknoloji", icon: "laptopcomputer", topicCount: 25)) {
             print("Technology tapped")
         }
         
-        CategoryCard(category: Category(id: 2, name: "Sosyal", icon: "person.2.fill", topicCount: 18)) {
+        CategoryCard(category: Category(id: 2, key: "social", name: "Sosyal", icon: "person.2.fill", topicCount: 18)) {
             print("Social tapped")
         }
     }

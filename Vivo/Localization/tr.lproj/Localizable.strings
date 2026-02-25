@@ -180,6 +180,20 @@
 "science" = "Bilim";
 "art" = "Sanat";
 "sport" = "Spor";
+"music" = "Müzik";
+"film" = "Film";
+"book" = "Kitap";
+"food" = "Yemek";
+"travel" = "Seyahat";
+"fashion" = "Moda";
+"health" = "Sağlık";
+"education" = "Eğitim";
+"environment" = "Çevre";
+"work_life" = "İş Hayatı";
+"topic_count" = "%d konu";
+"easy" = "Kolay";
+"medium" = "Orta";
+"hard" = "Zor";
 
 // MARK: - Technology Topics
 "ai_future" = "Yapay Zeka Geleceği";
@@ -267,6 +281,12 @@
 // MARK: - Zodiac Recommendations
 "zodiac_recommendations" = "Burç Önerileri";
 "zodiac_recommendations_description" = "Burç işaretlerinize göre kişiselleştirilmiş konular";
+"api_key" = "OpenAI API Anahtarı";
+"api_key_placeholder" = "API anahtarınızı yapıştırın";
+"save_key" = "Anahtarı Kaydet";
+"missing_api_key" = "Öneriler için API anahtarı gerekiyor.";
+"try_again" = "Bir hata oluştu. Lütfen tekrar deneyin.";
+"no_recommendations" = "Henüz öneri yok.";
 "zodiac_signs_included" = "Dahil Edilen İşaretler";
 "zodiac_communication_style" = "Burçlara Göre İletişim Tarzları";
 "zodiac_communication_description" = "Farklı burç işaretlerinin nasıl iletişim kurduğunu ve kendini ifade ettiğini keşfedin";

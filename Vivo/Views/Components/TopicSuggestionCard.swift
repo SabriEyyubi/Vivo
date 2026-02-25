@@ -49,19 +49,6 @@ struct TopicSuggestionCard: View {
                 .lineLimit(3)
                 .multilineTextAlignment(.leading)
             
-            // Action button
-            HStack {
-                Spacer()
-                Text("tartış")
-                    .font(.system(.caption, design: .rounded, weight: .semibold))
-                    .foregroundColor(Color.theme(.primaryAccent))
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 6)
-                    .background(
-                        Capsule()
-                            .stroke(Color.theme(.primaryAccent), lineWidth: 1)
-                    )
-            }
         }
         .padding(16)
         .background(

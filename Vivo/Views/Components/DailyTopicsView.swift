@@ -1,12 +1,30 @@
 import SwiftUI
+import RealmSwift
 
 struct DailyTopicsView: View {
     @StateObject private var localizationHelper = LocalizationHelper.shared
+    @State private var dailyTopics: [Topic] = []
+    @State private var hotTopics: [TopicRealm] = []
+    @State private var suggestedTopics: [TopicRealm] = []
     let onTabChange: (Int) -> Void
     
-    private var topics: [Topic] {
-        Topic.getDailyTopics(for: localizationHelper.currentLanguage.rawValue)
-    }
+    private let categoryKeyByName: [String: String] = [
+        "Teknoloji": "technology",
+        "Sosyal": "social",
+        "Bilim": "science",
+        "Sanat": "art",
+        "Spor": "sport",
+        "Müzik": "music",
+        "Film": "film",
+        "Kitap": "book",
+        "Yemek": "food",
+        "Seyahat": "travel",
+        "Moda": "fashion",
+        "Sağlık": "health",
+        "Eğitim": "education",
+        "Çevre": "environment",
+        "İş Hayatı": "work_life"
+    ]
 
     var body: some View {
         ScrollView {
@@ -33,7 +51,7 @@ struct DailyTopicsView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
-                        ForEach(Array(topics.enumerated()), id: \.element.id) { index, topic in
+                        ForEach(Array(dailyTopics.enumerated()), id: \.element.id) { index, topic in
                             TopicCardView(topic: topic) { }
                                 .frame(width: 300)
                         }
@@ -63,11 +81,12 @@ struct DailyTopicsView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
                         // Hot topics cards
-                        ForEach(0..<3) { hotIndex in
+                        ForEach(hotTopics.indices, id: \.self) { hotIndex in
+                            let topic = hotTopics[hotIndex]
                             HotTopicCard(
-                                title: "Hot Topics \(hotIndex + 1)",
-                                description: "hot_topic_description".localized,
-                                difficulty: "difficult".localized
+                                title: topic.title,
+                                description: topic.summary,
+                                difficulty: ["easy", "medium", "hard"].randomElement()?.localized ?? "medium".localized
                             )
                             .frame(width: 280)
                         }
@@ -103,11 +122,12 @@ struct DailyTopicsView: View {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 16) {
                         // Suggestion cards
-                        ForEach(0..<5) { suggestionIndex in
+                        ForEach(suggestedTopics.indices, id: \.self) { suggestionIndex in
+                            let topic = suggestedTopics[suggestionIndex]
                             TopicSuggestionCard(
-                                title: "Önerilen Konu \(suggestionIndex + 1)",
-                                description: "Bu konu size özel olarak öneriliyor",
-                                category: suggestionIndex % 2 == 0 ? "Teknoloji" : "Sosyal"
+                                title: topic.title,
+                                description: topic.summary,
+                                category: localizedCategoryName(topic.category)
                             )
                             .frame(width: 260)
                         }
@@ -169,6 +189,45 @@ struct DailyTopicsView: View {
         }
         .onReceive(localizationHelper.$currentLanguage) { _ in
             // Language changed, no need to reset index since we're not using TabView anymore
+            loadRandomTopics()
         }
+        .onAppear {
+            loadRandomTopics()
+        }
+    }
+
+    private func loadRandomTopics() {
+        do {
+            let realm = try Realm()
+            let results = realm.objects(TopicRealm.self)
+                .where { $0.language == localizationHelper.currentLanguage.rawValue }
+            let all = Array(results).shuffled()
+
+            let daily = Array(all.prefix(10))
+            let hot = Array(all.dropFirst(10).prefix(10))
+            let suggested = Array(all.dropFirst(20).prefix(10))
+
+            dailyTopics = daily.map { topic in
+                Topic(
+                    title: topic.title,
+                    description: topic.summary,
+                    category: localizedCategoryName(topic.category),
+                    difficulty: .medium,
+                    language: localizationHelper.currentLanguage.rawValue
+                )
+            }
+
+            hotTopics = hot
+            suggestedTopics = suggested
+        } catch {
+            dailyTopics = []
+            hotTopics = []
+            suggestedTopics = []
+        }
+    }
+
+    private func localizedCategoryName(_ category: String) -> String {
+        let key = categoryKeyByName[category] ?? category
+        return key.localized
     }
 }

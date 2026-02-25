@@ -11,6 +11,7 @@ struct MainTabView: View {
     @StateObject private var localizationHelper = LocalizationHelper.shared
     @StateObject private var themeManager = ThemeManager.shared
     @State private var selectedTab = 0
+    private let showAITab = false
     
     var body: some View {
         ZStack {
@@ -45,21 +46,23 @@ struct MainTabView: View {
                 }
                 .tag(2)
             
-            // AI Tab
-            AIView()
-                .tabItem {
-                    Image(systemName: selectedTab == 3 ? "brain.head.profile.fill" : "brain.head.profile")
-                    Text("ai".localized)
-                }
-                .tag(3)
+            if showAITab {
+                // AI Tab
+                AIView()
+                    .tabItem {
+                        Image(systemName: selectedTab == 3 ? "brain.head.profile.fill" : "brain.head.profile")
+                        Text("ai".localized)
+                    }
+                    .tag(3)
+            }
             
             // Profile Tab
             ProfileView()
                 .tabItem {
-                    Image(systemName: selectedTab == 4 ? "person.circle.fill" : "person.circle")
+                    Image(systemName: selectedTab == (showAITab ? 4 : 3) ? "person.circle.fill" : "person.circle")
                     Text("profile".localized)
                 }
-                .tag(4)
+                .tag(showAITab ? 4 : 3)
         }
         .accentColor(Color.theme(.primaryAccent))
         .onAppear {

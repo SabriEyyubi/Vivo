@@ -43,46 +43,6 @@ struct DiscoverView: View {
                         .padding(.horizontal, 20)
                     }
                     
-                    // Additional discovery options
-                    VStack(spacing: 20) {
-                        Text("More Ways to Discover")
-                            .font(.system(.title2, design: .rounded, weight: .bold))
-                            .foregroundColor(Color.theme(.primaryText))
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 20)
-                        
-                        // Placeholder for more discovery options
-                        VStack(spacing: 16) {
-                            ForEach(0..<3) { index in
-                                HStack {
-                                    Image(systemName: "sparkles")
-                                        .font(.system(size: 20))
-                                        .foregroundColor(Color.theme(.primaryAccent))
-                                    
-                                    Text("Discovery Option \(index + 1)")
-                                        .font(.system(.body, design: .rounded, weight: .medium))
-                                        .foregroundColor(Color.theme(.primaryText))
-                                    
-                                    Spacer()
-                                    
-                                    Image(systemName: "chevron.right")
-                                        .font(.system(size: 14, weight: .semibold))
-                                        .foregroundColor(Color.theme(.secondaryText))
-                                }
-                                .padding(16)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 12)
-                                        .fill(Color.theme(.cardBackground))
-                                        .overlay(
-                                            RoundedRectangle(cornerRadius: 12)
-                                                .stroke(Color.theme(.border).opacity(0.3), lineWidth: 1)
-                                        )
-                                )
-                            }
-                        }
-                        .padding(.horizontal, 20)
-                    }
-                    
                     Spacer(minLength: 40)
                 }
             }
